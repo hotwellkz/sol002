@@ -190,3 +190,9 @@
 2025-04-19 13:17:47 | DEBUG    | services.wallet:get_wallet:112 - Приватный ключ расшифрован для пользователя 1620950118
 2025-04-19 13:17:47 | INFO     | services.firebase_service:save_export_timestamp:115 - Export timestamp saved for user 1620950118
 2025-04-19 13:18:19 | INFO     | handlers.export_keys:process_export_confirmation:86 - Private key exported and auto-deleted for user 1620950118
+2025-04-19 13:57:58 | INFO     | __main__:<module>:150 - Starting application...
+2025-04-19 13:57:58 | INFO     | __main__:main:127 - Starting bot...
+2025-04-19 13:57:59 | INFO     | __main__:check_solana_connection:115 - Successfully connected to Solana RPC. Current slot: 334464061
+2025-04-19 13:57:59 | INFO     | __main__:setup_commands:76 - Настройка команд бота...
+2025-04-19 13:57:59 | INFO     | __main__:setup_commands:90 - Команды бота успешно настроены
+2025-04-19 13:57:59 | INFO     | __main__:main:140 - Bot is ready to accept messages
