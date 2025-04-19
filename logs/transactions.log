@@ -1,0 +1,192 @@
+2025-04-19 12:34:34 | INFO     | __main__:<module>:150 - Starting application...
+2025-04-19 12:34:34 | INFO     | __main__:main:127 - Starting bot...
+2025-04-19 12:34:35 | INFO     | __main__:check_solana_connection:115 - Successfully connected to Solana RPC. Current slot: 334451339
+2025-04-19 12:34:35 | INFO     | __main__:setup_commands:76 - Настройка команд бота...
+2025-04-19 12:34:36 | INFO     | __main__:setup_commands:90 - Команды бота успешно настроены
+2025-04-19 12:34:36 | INFO     | __main__:main:140 - Bot is ready to accept messages
+2025-04-19 12:42:07 | INFO     | keyboards.inline:process_export_callback:554 - User 1620950118 initiated export keys via button
+2025-04-19 12:43:45 | INFO     | __main__:<module>:150 - Starting application...
+2025-04-19 12:43:45 | INFO     | __main__:main:127 - Starting bot...
+2025-04-19 12:43:45 | INFO     | __main__:check_solana_connection:115 - Successfully connected to Solana RPC. Current slot: 334452731
+2025-04-19 12:43:45 | INFO     | __main__:setup_commands:76 - Настройка команд бота...
+2025-04-19 12:43:46 | INFO     | __main__:setup_commands:90 - Команды бота успешно настроены
+2025-04-19 12:43:46 | INFO     | __main__:main:140 - Bot is ready to accept messages
+2025-04-19 12:43:46 | INFO     | handlers.start:cmd_start:24 - User 1620950118 started the bot
+2025-04-19 12:44:39 | INFO     | __main__:<module>:150 - Starting application...
+2025-04-19 12:44:39 | INFO     | __main__:main:127 - Starting bot...
+2025-04-19 12:44:39 | INFO     | __main__:check_solana_connection:115 - Successfully connected to Solana RPC. Current slot: 334452870
+2025-04-19 12:44:39 | INFO     | __main__:setup_commands:76 - Настройка команд бота...
+2025-04-19 12:44:39 | INFO     | __main__:setup_commands:90 - Команды бота успешно настроены
+2025-04-19 12:44:39 | INFO     | __main__:main:140 - Bot is ready to accept messages
+2025-04-19 12:44:40 | INFO     | handlers.start:cmd_start:24 - User 1620950118 started the bot
+2025-04-19 12:44:41 | INFO     | services.solana_service:get_sol_balance:136 - Getting SOL balance for EQLESpKPPWNgiFuuQTMTMuTsFGqvZQndhE5RtedatD3B
+2025-04-19 12:44:41 | INFO     | handlers.start:cmd_start:24 - User 1620950118 started the bot
+2025-04-19 12:44:42 | INFO     | services.solana_service:get_sol_balance:136 - Getting SOL balance for EQLESpKPPWNgiFuuQTMTMuTsFGqvZQndhE5RtedatD3B
+2025-04-19 12:44:42 | INFO     | services.solana_service:get_sol_balance:138 - SOL balance response: GetBalanceResp { context: RpcResponseContext { slot: 334452877, api_version: Some("2.1.9") }, value: 6855722 }
+2025-04-19 12:44:42 | INFO     | services.solana_service:get_sol_balance:156 - Calculated SOL balance: 0.006855722
+2025-04-19 12:44:42 | INFO     | services.solana_service:get_sol_balance:138 - SOL balance response: GetBalanceResp { context: RpcResponseContext { slot: 334452877, api_version: Some("2.1.9") }, value: 6855722 }
+2025-04-19 12:44:42 | INFO     | services.solana_service:get_sol_balance:156 - Calculated SOL balance: 0.006855722
+2025-04-19 12:44:42 | INFO     | services.price_service:get_sol_price:75 - Current SOL price: $138.73
+2025-04-19 12:44:42 | ERROR    | services.solana_service:get_wallet_tokens:34 - === TEST LOGGER ===
+2025-04-19 12:44:43 | INFO     | services.solana_service:get_wallet_tokens:49 - [get_wallet_tokens] Всего токен-аккаунтов: 1
+2025-04-19 12:44:43 | DEBUG    | services.solana_service:get_wallet_tokens:50 - [get_wallet_tokens] Ответ Solana: [RpcKeyedAccount {
+    pubkey: Pubkey(
+        HiPL1ZaFQD4Q45CJjQ8wbLVwG2X3Hv3tM75RJGFssceU,
+    ),
+    account: Account(
+        Account {
+            lamports: 2039280,
+            data.len: 165,
+            owner: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA,
+            executable: false,
+            rent_epoch: 18446744073709551615,
+            data: 37998ccbf2d0458b615cbcc6b1a367c4749e9fef7306622e1b1b58910120bc9ac72208bcc77b7017129bee750dfcb99e7b2ead5e4f978aa953df9997f0b28076,
+        },
+    ),
+}]
+2025-04-19 12:44:43 | DEBUG    | services.solana_service:get_wallet_tokens:52 - [DIAG: account type=<class 'solders.rpc.responses.RpcKeyedAccount'>, dir=['__bytes__', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'account', 'from_bytes', 'from_json', 'pubkey', 'to_json']]
+2025-04-19 12:44:43 | DEBUG    | services.solana_service:get_wallet_tokens:72 - [get_wallet_tokens] Тип data: <class 'bytes'>, содержимое: b'7\x99\x8c\xcb\xf2\xd0E\x8ba\\\xbc\xc6\xb1\xa3g\xc4t\x9e\x9f\xefs\x06b.\x1b\x1bX\x91\x01 \xbc\x9a\xc7"\x08\xbc\xc7{p\x17\x12\x9b\xeeu\r\xfc\xb9\x9e{.\xad^O\x97\x8a\xa9S\xdf\x99\x97\xf0\xb2\x80v\r\xf5\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+2025-04-19 12:44:43 | ERROR    | services.solana_service:get_wallet_tokens:73 - [DIAG: raw_data type=<class 'bytes'>, len=165]
+2025-04-19 12:44:43 | ERROR    | services.solana_service:get_wallet_tokens:75 - [DIAG: valid raw_data, proceed to decode]
+2025-04-19 12:44:43 | DEBUG    | services.solana_service:get_wallet_tokens:80 - [DIAG: amount_bytes=0df5000000000000, amount=62733]
+2025-04-19 12:44:43 | ERROR    | services.solana_service:get_wallet_tokens:81 - [DIAG: pubkey=HiPL1ZaFQD4Q45CJjQ8wbLVwG2X3Hv3tM75RJGFssceU, mint=4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R, amount=62733]
+2025-04-19 12:44:43 | INFO     | services.solana_service:get_token_balance:194 - Getting balance for token 4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R at account HiPL1ZaFQD4Q45CJjQ8wbLVwG2X3Hv3tM75RJGFssceU
+2025-04-19 12:44:43 | INFO     | services.price_service:get_sol_price:75 - Current SOL price: $138.73
+2025-04-19 12:44:43 | ERROR    | services.solana_service:get_wallet_tokens:34 - === TEST LOGGER ===
+2025-04-19 12:44:43 | INFO     | services.solana_service:get_wallet_tokens:49 - [get_wallet_tokens] Всего токен-аккаунтов: 1
+2025-04-19 12:44:43 | DEBUG    | services.solana_service:get_wallet_tokens:50 - [get_wallet_tokens] Ответ Solana: [RpcKeyedAccount {
+    pubkey: Pubkey(
+        HiPL1ZaFQD4Q45CJjQ8wbLVwG2X3Hv3tM75RJGFssceU,
+    ),
+    account: Account(
+        Account {
+            lamports: 2039280,
+            data.len: 165,
+            owner: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA,
+            executable: false,
+            rent_epoch: 18446744073709551615,
+            data: 37998ccbf2d0458b615cbcc6b1a367c4749e9fef7306622e1b1b58910120bc9ac72208bcc77b7017129bee750dfcb99e7b2ead5e4f978aa953df9997f0b28076,
+        },
+    ),
+}]
+2025-04-19 12:44:43 | DEBUG    | services.solana_service:get_wallet_tokens:52 - [DIAG: account type=<class 'solders.rpc.responses.RpcKeyedAccount'>, dir=['__bytes__', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'account', 'from_bytes', 'from_json', 'pubkey', 'to_json']]
+2025-04-19 12:44:43 | DEBUG    | services.solana_service:get_wallet_tokens:72 - [get_wallet_tokens] Тип data: <class 'bytes'>, содержимое: b'7\x99\x8c\xcb\xf2\xd0E\x8ba\\\xbc\xc6\xb1\xa3g\xc4t\x9e\x9f\xefs\x06b.\x1b\x1bX\x91\x01 \xbc\x9a\xc7"\x08\xbc\xc7{p\x17\x12\x9b\xeeu\r\xfc\xb9\x9e{.\xad^O\x97\x8a\xa9S\xdf\x99\x97\xf0\xb2\x80v\r\xf5\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+2025-04-19 12:44:43 | ERROR    | services.solana_service:get_wallet_tokens:73 - [DIAG: raw_data type=<class 'bytes'>, len=165]
+2025-04-19 12:44:43 | ERROR    | services.solana_service:get_wallet_tokens:75 - [DIAG: valid raw_data, proceed to decode]
+2025-04-19 12:44:43 | DEBUG    | services.solana_service:get_wallet_tokens:80 - [DIAG: amount_bytes=0df5000000000000, amount=62733]
+2025-04-19 12:44:43 | ERROR    | services.solana_service:get_wallet_tokens:81 - [DIAG: pubkey=HiPL1ZaFQD4Q45CJjQ8wbLVwG2X3Hv3tM75RJGFssceU, mint=4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R, amount=62733]
+2025-04-19 12:44:43 | INFO     | services.solana_service:get_token_balance:194 - Getting balance for token 4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R at account HiPL1ZaFQD4Q45CJjQ8wbLVwG2X3Hv3tM75RJGFssceU
+2025-04-19 12:44:43 | INFO     | services.solana_service:get_token_balance:204 - Token balance response: GetTokenAccountBalanceResp { context: RpcResponseContext { slot: 334452878, api_version: Some("2.2.0") }, value: UiTokenAmount(UiTokenAmount { ui_amount: Some(0.062733), decimals: 6, amount: "62733", ui_amount_string: "0.062733" }) }
+2025-04-19 12:44:43 | INFO     | services.solana_service:get_token_balance:230 - Token 4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R amount: 62733, decimals: 6
+2025-04-19 12:44:43 | INFO     | services.solana_service:get_token_balance:234 - Calculated balance for token 4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R: 0.062733
+2025-04-19 12:44:43 | INFO     | services.solana_service:get_token_balance:204 - Token balance response: GetTokenAccountBalanceResp { context: RpcResponseContext { slot: 334452878, api_version: Some("2.2.0") }, value: UiTokenAmount(UiTokenAmount { ui_amount: Some(0.062733), decimals: 6, amount: "62733", ui_amount_string: "0.062733" }) }
+2025-04-19 12:44:43 | INFO     | services.solana_service:get_token_balance:230 - Token 4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R amount: 62733, decimals: 6
+2025-04-19 12:44:43 | INFO     | services.solana_service:get_token_balance:234 - Calculated balance for token 4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R: 0.062733
+2025-04-19 12:44:43 | INFO     | handlers.start:cmd_start:77 - Welcome message sent to user 1620950118
+2025-04-19 12:44:44 | INFO     | handlers.start:cmd_start:77 - Welcome message sent to user 1620950118
+2025-04-19 12:44:48 | INFO     | keyboards.inline:process_export_callback:554 - User 1620950118 initiated export keys via button
+2025-04-19 12:44:50 | DEBUG    | services.wallet:get_wallet:106 - Приватный ключ расшифрован для пользователя 1620950118
+2025-04-19 12:44:50 | INFO     | services.firebase_service:save_export_timestamp:115 - Export timestamp saved for user 1620950118
+2025-04-19 12:45:22 | INFO     | handlers.export_keys:process_export_confirmation:86 - Private key exported and auto-deleted for user 1620950118
+2025-04-19 12:50:14 | INFO     | handlers.start:cmd_start:24 - User 1620950118 started the bot
+2025-04-19 12:50:15 | INFO     | services.firebase_service:save_user_wallet:72 - Wallet data saved for user 1620950118
+2025-04-19 12:50:15 | INFO     | services.solana_service:get_sol_balance:136 - Getting SOL balance for FbKA5Ah3u4os9ngHcXrYmTR7bZK5vHn5i8tBfjTLLgpR
+2025-04-19 12:50:16 | INFO     | services.solana_service:get_sol_balance:138 - SOL balance response: GetBalanceResp { context: RpcResponseContext { slot: 334453723, api_version: Some("2.1.9") }, value: 0 }
+2025-04-19 12:50:16 | INFO     | services.solana_service:get_sol_balance:156 - Calculated SOL balance: 0.0
+2025-04-19 12:50:16 | INFO     | services.price_service:get_sol_price:75 - Current SOL price: $138.79
+2025-04-19 12:50:16 | ERROR    | services.solana_service:get_wallet_tokens:34 - === TEST LOGGER ===
+2025-04-19 12:50:16 | INFO     | services.solana_service:get_wallet_tokens:49 - [get_wallet_tokens] Всего токен-аккаунтов: 0
+2025-04-19 12:50:16 | DEBUG    | services.solana_service:get_wallet_tokens:50 - [get_wallet_tokens] Ответ Solana: []
+2025-04-19 12:50:17 | INFO     | handlers.start:cmd_start:77 - Welcome message sent to user 1620950118
+2025-04-19 12:50:22 | INFO     | keyboards.inline:process_export_callback:554 - User 1620950118 initiated export keys via button
+2025-04-19 12:50:23 | ERROR    | services.wallet:get_wallet:113 - Ошибка расшифровки ключа для пользователя 1620950118: 
+2025-04-19 12:50:23 | ERROR    | services.wallet:get_wallet:117 - Error getting wallet for user 1620950118: 
+2025-04-19 12:53:27 | INFO     | handlers.start:cmd_start:24 - User 1620950118 started the bot
+2025-04-19 12:53:28 | INFO     | services.firebase_service:save_user_wallet:72 - Wallet data saved for user 1620950118
+2025-04-19 12:53:29 | INFO     | services.solana_service:get_sol_balance:136 - Getting SOL balance for FsUxuf1YU6rV2FCgSTWW8koT59ijDCZ15ZDCPYU2j62V
+2025-04-19 12:53:29 | INFO     | services.solana_service:get_sol_balance:138 - SOL balance response: GetBalanceResp { context: RpcResponseContext { slot: 334454209, api_version: Some("2.1.9") }, value: 0 }
+2025-04-19 12:53:29 | INFO     | services.solana_service:get_sol_balance:156 - Calculated SOL balance: 0.0
+2025-04-19 12:53:30 | INFO     | services.price_service:get_sol_price:75 - Current SOL price: $138.77
+2025-04-19 12:53:30 | ERROR    | services.solana_service:get_wallet_tokens:34 - === TEST LOGGER ===
+2025-04-19 12:53:30 | INFO     | services.solana_service:get_wallet_tokens:49 - [get_wallet_tokens] Всего токен-аккаунтов: 0
+2025-04-19 12:53:30 | DEBUG    | services.solana_service:get_wallet_tokens:50 - [get_wallet_tokens] Ответ Solana: []
+2025-04-19 12:53:30 | INFO     | handlers.start:cmd_start:77 - Welcome message sent to user 1620950118
+2025-04-19 12:53:34 | INFO     | keyboards.inline:process_export_callback:554 - User 1620950118 initiated export keys via button
+2025-04-19 12:53:36 | ERROR    | services.wallet:get_wallet:113 - Ошибка расшифровки ключа для пользователя 1620950118: 
+2025-04-19 12:53:36 | ERROR    | services.wallet:get_wallet:117 - Error getting wallet for user 1620950118: 
+2025-04-19 12:57:55 | INFO     | __main__:<module>:150 - Starting application...
+2025-04-19 12:57:55 | INFO     | __main__:main:127 - Starting bot...
+2025-04-19 12:57:56 | INFO     | __main__:check_solana_connection:115 - Successfully connected to Solana RPC. Current slot: 334454890
+2025-04-19 12:57:56 | INFO     | __main__:setup_commands:76 - Настройка команд бота...
+2025-04-19 12:57:56 | INFO     | __main__:setup_commands:90 - Команды бота успешно настроены
+2025-04-19 12:57:56 | INFO     | __main__:main:140 - Bot is ready to accept messages
+2025-04-19 12:58:05 | INFO     | handlers.start:cmd_start:24 - User 1620950118 started the bot
+2025-04-19 12:58:07 | DEBUG    | services.utils:encrypt_private_key:24 - Encrypting private key, length: 88
+2025-04-19 12:58:07 | DEBUG    | services.utils:get_encryption_cipher:10 - Using encryption key: Vch12...
+2025-04-19 12:58:07 | DEBUG    | services.utils:encrypt_private_key:28 - Key encrypted successfully, result length: 204
+2025-04-19 12:58:07 | DEBUG    | services.wallet:create_wallet:69 - Приватный ключ зашифрован для пользователя 1620950118
+2025-04-19 12:58:07 | INFO     | services.firebase_service:save_user_wallet:72 - Wallet data saved for user 1620950118
+2025-04-19 12:58:07 | INFO     | services.wallet:create_wallet:79 - New wallet created for user 1620950118
+2025-04-19 12:58:07 | INFO     | handlers.start:cmd_start:32 - Created new wallet for user 1620950118
+2025-04-19 12:58:07 | INFO     | services.solana_service:get_sol_balance:136 - Getting SOL balance for 8sYEVS9nFJy7H8pBVKMR818mfFgtGoPSLffWEZqQpHRV
+2025-04-19 12:58:08 | INFO     | services.solana_service:get_sol_balance:138 - SOL balance response: GetBalanceResp { context: RpcResponseContext { slot: 334454922, api_version: Some("2.1.9") }, value: 0 }
+2025-04-19 12:58:08 | INFO     | services.solana_service:get_sol_balance:156 - Calculated SOL balance: 0.0
+2025-04-19 12:58:09 | INFO     | services.price_service:get_sol_price:75 - Current SOL price: $138.71
+2025-04-19 12:58:09 | ERROR    | services.solana_service:get_wallet_tokens:34 - === TEST LOGGER ===
+2025-04-19 12:58:09 | INFO     | services.solana_service:get_wallet_tokens:49 - [get_wallet_tokens] Всего токен-аккаунтов: 0
+2025-04-19 12:58:09 | DEBUG    | services.solana_service:get_wallet_tokens:50 - [get_wallet_tokens] Ответ Solana: []
+2025-04-19 12:58:09 | INFO     | handlers.start:cmd_start:65 - Welcome message sent to user 1620950118
+2025-04-19 12:58:12 | INFO     | keyboards.inline:process_export_callback:554 - User 1620950118 initiated export keys via button
+2025-04-19 12:58:14 | DEBUG    | services.wallet:get_wallet:104 - Got private key for user 1620950118, length: 204
+2025-04-19 12:58:14 | DEBUG    | services.utils:decrypt_private_key:45 - Decrypting private key, encrypted length: 204
+2025-04-19 12:58:14 | DEBUG    | services.utils:get_encryption_cipher:10 - Using encryption key: Vch12...
+2025-04-19 12:58:14 | DEBUG    | services.utils:decrypt_private_key:53 - Key decrypted successfully, result length: 88
+2025-04-19 12:58:14 | DEBUG    | services.wallet:get_wallet:112 - Приватный ключ расшифрован для пользователя 1620950118
+2025-04-19 12:58:15 | INFO     | services.firebase_service:save_export_timestamp:115 - Export timestamp saved for user 1620950118
+2025-04-19 12:58:46 | INFO     | handlers.export_keys:process_export_confirmation:86 - Private key exported and auto-deleted for user 1620950118
+2025-04-19 13:17:37 | INFO     | handlers.start:cmd_start:24 - User 1620950118 started the bot
+2025-04-19 13:17:39 | DEBUG    | services.wallet:get_wallet:104 - Got private key for user 1620950118, length: 204
+2025-04-19 13:17:39 | DEBUG    | services.utils:decrypt_private_key:45 - Decrypting private key, encrypted length: 204
+2025-04-19 13:17:39 | DEBUG    | services.utils:get_encryption_cipher:10 - Using encryption key: Vch12...
+2025-04-19 13:17:39 | DEBUG    | services.utils:decrypt_private_key:53 - Key decrypted successfully, result length: 88
+2025-04-19 13:17:39 | DEBUG    | services.wallet:get_wallet:112 - Приватный ключ расшифрован для пользователя 1620950118
+2025-04-19 13:17:39 | INFO     | services.solana_service:get_sol_balance:136 - Getting SOL balance for EQLESpKPPWNgiFuuQTMTMuTsFGqvZQndhE5RtedatD3B
+2025-04-19 13:17:39 | INFO     | services.solana_service:get_sol_balance:138 - SOL balance response: GetBalanceResp { context: RpcResponseContext { slot: 334457902, api_version: Some("2.1.9") }, value: 6855722 }
+2025-04-19 13:17:39 | INFO     | services.solana_service:get_sol_balance:156 - Calculated SOL balance: 0.006855722
+2025-04-19 13:17:40 | INFO     | services.price_service:get_sol_price:75 - Current SOL price: $138.65
+2025-04-19 13:17:40 | ERROR    | services.solana_service:get_wallet_tokens:34 - === TEST LOGGER ===
+2025-04-19 13:17:40 | INFO     | services.solana_service:get_wallet_tokens:49 - [get_wallet_tokens] Всего токен-аккаунтов: 1
+2025-04-19 13:17:40 | DEBUG    | services.solana_service:get_wallet_tokens:50 - [get_wallet_tokens] Ответ Solana: [RpcKeyedAccount {
+    pubkey: Pubkey(
+        HiPL1ZaFQD4Q45CJjQ8wbLVwG2X3Hv3tM75RJGFssceU,
+    ),
+    account: Account(
+        Account {
+            lamports: 2039280,
+            data.len: 165,
+            owner: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA,
+            executable: false,
+            rent_epoch: 18446744073709551615,
+            data: 37998ccbf2d0458b615cbcc6b1a367c4749e9fef7306622e1b1b58910120bc9ac72208bcc77b7017129bee750dfcb99e7b2ead5e4f978aa953df9997f0b28076,
+        },
+    ),
+}]
+2025-04-19 13:17:40 | DEBUG    | services.solana_service:get_wallet_tokens:52 - [DIAG: account type=<class 'solders.rpc.responses.RpcKeyedAccount'>, dir=['__bytes__', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'account', 'from_bytes', 'from_json', 'pubkey', 'to_json']]
+2025-04-19 13:17:40 | DEBUG    | services.solana_service:get_wallet_tokens:72 - [get_wallet_tokens] Тип data: <class 'bytes'>, содержимое: b'7\x99\x8c\xcb\xf2\xd0E\x8ba\\\xbc\xc6\xb1\xa3g\xc4t\x9e\x9f\xefs\x06b.\x1b\x1bX\x91\x01 \xbc\x9a\xc7"\x08\xbc\xc7{p\x17\x12\x9b\xeeu\r\xfc\xb9\x9e{.\xad^O\x97\x8a\xa9S\xdf\x99\x97\xf0\xb2\x80v\r\xf5\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+2025-04-19 13:17:40 | ERROR    | services.solana_service:get_wallet_tokens:73 - [DIAG: raw_data type=<class 'bytes'>, len=165]
+2025-04-19 13:17:40 | ERROR    | services.solana_service:get_wallet_tokens:75 - [DIAG: valid raw_data, proceed to decode]
+2025-04-19 13:17:40 | DEBUG    | services.solana_service:get_wallet_tokens:80 - [DIAG: amount_bytes=0df5000000000000, amount=62733]
+2025-04-19 13:17:40 | ERROR    | services.solana_service:get_wallet_tokens:81 - [DIAG: pubkey=HiPL1ZaFQD4Q45CJjQ8wbLVwG2X3Hv3tM75RJGFssceU, mint=4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R, amount=62733]
+2025-04-19 13:17:40 | INFO     | services.solana_service:get_token_balance:194 - Getting balance for token 4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R at account HiPL1ZaFQD4Q45CJjQ8wbLVwG2X3Hv3tM75RJGFssceU
+2025-04-19 13:17:41 | INFO     | services.solana_service:get_token_balance:204 - Token balance response: GetTokenAccountBalanceResp { context: RpcResponseContext { slot: 334457905, api_version: Some("2.1.16") }, value: UiTokenAmount(UiTokenAmount { ui_amount: Some(0.062733), decimals: 6, amount: "62733", ui_amount_string: "0.062733" }) }
+2025-04-19 13:17:41 | INFO     | services.solana_service:get_token_balance:230 - Token 4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R amount: 62733, decimals: 6
+2025-04-19 13:17:41 | INFO     | services.solana_service:get_token_balance:234 - Calculated balance for token 4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R: 0.062733
+2025-04-19 13:17:41 | INFO     | handlers.start:cmd_start:65 - Welcome message sent to user 1620950118
+2025-04-19 13:17:45 | INFO     | keyboards.inline:process_export_callback:554 - User 1620950118 initiated export keys via button
+2025-04-19 13:17:47 | DEBUG    | services.wallet:get_wallet:104 - Got private key for user 1620950118, length: 204
+2025-04-19 13:17:47 | DEBUG    | services.utils:decrypt_private_key:45 - Decrypting private key, encrypted length: 204
+2025-04-19 13:17:47 | DEBUG    | services.utils:get_encryption_cipher:10 - Using encryption key: Vch12...
+2025-04-19 13:17:47 | DEBUG    | services.utils:decrypt_private_key:53 - Key decrypted successfully, result length: 88
+2025-04-19 13:17:47 | DEBUG    | services.wallet:get_wallet:112 - Приватный ключ расшифрован для пользователя 1620950118
+2025-04-19 13:17:47 | INFO     | services.firebase_service:save_export_timestamp:115 - Export timestamp saved for user 1620950118
+2025-04-19 13:18:19 | INFO     | handlers.export_keys:process_export_confirmation:86 - Private key exported and auto-deleted for user 1620950118

@@ -1,0 +1,23 @@
+services:
+  bot:
+    build: .
+    container_name: solana_trading_bot
+    restart: unless-stopped
+    volumes:
+      - .:/app
+      - ./data:/app/data
+    env_file:
+      - .env
+    environment:
+      - TZ=Asia/Almaty
+      - PYTHONPATH=/app
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys; sys.exit(0 if __import__('os').path.exists('/app/bot.py') else 1)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

@@ -1,0 +1,201 @@
+import os
+import asyncio
+import logging
+from aiogram import Bot, Dispatcher, types, F
+from aiogram.fsm.storage.memory import MemoryStorage
+from aiogram.fsm.context import FSMContext
+from aiogram.fsm.state import State, StatesGroup
+from aiogram.filters import Command
+from dotenv import load_dotenv
+from services.jupiter_service import JupiterService
+from services.solana_client import solana_client
+from loguru import logger
+import aiohttp
+import json
+import base58
+from solana.keypair import Keypair
+from solana.publickey import PublicKey
+from solana.rpc.types import TxOpts
+from solana.transaction import Transaction
+import asyncio
+from typing import Optional, Dict, Any
+
+# Загрузка переменных окружения
+load_dotenv()
+
+# Настройка логирования
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Инициализация бота и диспетчера
+bot = Bot(token=os.getenv("TELEGRAM_BOT_TOKEN"))
+storage = MemoryStorage()
+dp = Dispatcher(storage=storage)
+
+# Инициализация сервисов
+jupiter_service = JupiterService()
+
+class SwapStates(StatesGroup):
+    waiting_for_token = State()
+    waiting_for_amount = State()
+
+async def send_telegram_message(chat_id: int, text: str, parse_mode: Optional[str] = None) -> bool:
+    """
+    Отправляет сообщение в Telegram с обработкой ошибок
+    
+    Args:
+        chat_id: ID чата
+        text: Текст сообщения
+        parse_mode: Режим форматирования
+        
+    Returns:
+        bool: True если сообщение отправлено успешно
+    """
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            await bot.send_message(chat_id, text, parse_mode=parse_mode)
+            return True
+        except Exception as e:
+            logger.error(f"Ошибка Telegram (попытка {attempt + 1}/{max_retries}): {str(e)}")
+            if attempt < max_retries - 1:
+                await asyncio.sleep(2)
+                continue
+            return False
+
+@dp.message(Command("start"))
+async def cmd_start(message: types.Message):
+    """Обработчик команды /start"""
+    try:
+        await send_telegram_message(
+            message.chat.id,
+            "👋 Привет! Я бот для свопа токенов через Jupiter.\n\n"
+            "Используйте команду /swap для начала свопа."
+        )
+    except Exception as e:
+        logger.error(f"Ошибка в cmd_start: {str(e)}")
+
+@dp.message(Command("swap"))
+async def cmd_swap(message: types.Message, state: FSMContext):
+    """Обработчик команды /swap"""
+    try:
+        await state.set_state(SwapStates.waiting_for_token)
+        await send_telegram_message(
+            message.chat.id,
+            "Введите адрес токена, который хотите получить:"
+        )
+    except Exception as e:
+        logger.error(f"Ошибка в cmd_swap: {str(e)}")
+
+@dp.message(SwapStates.waiting_for_token)
+async def process_token(message: types.Message, state: FSMContext):
+    """Обработчик ввода адреса токена"""
+    try:
+        token_address = message.text.strip()
+        
+        # Проверяем валидность адреса
+        try:
+            PublicKey(token_address)
+        except:
+            await send_telegram_message(
+                message.chat.id,
+                "❌ Неверный формат адреса токена. Попробуйте еще раз:"
+            )
+            return
+            
+        await state.update_data(token_address=token_address)
+        await state.set_state(SwapStates.waiting_for_amount)
+        await send_telegram_message(
+            message.chat.id,
+            "Введите количество SOL для свопа:"
+        )
+    except Exception as e:
+        logger.error(f"Ошибка в process_token: {str(e)}")
+        await state.clear()
+
+@dp.message(SwapStates.waiting_for_amount)
+async def process_amount(message: types.Message, state: FSMContext):
+    """Обработчик ввода количества SOL"""
+    try:
+        amount = message.text.strip()
+        
+        # Проверяем валидность количества
+        try:
+            amount = float(amount)
+            if amount <= 0:
+                raise ValueError
+        except:
+            await send_telegram_message(
+                message.chat.id,
+                "❌ Неверный формат количества. Введите положительное число:"
+            )
+            return
+            
+        # Получаем сохраненный адрес токена
+        data = await state.get_data()
+        token_address = data.get("token_address")
+        
+        if not token_address:
+            await send_telegram_message(
+                message.chat.id,
+                "❌ Ошибка: адрес токена не найден. Начните заново с /swap"
+            )
+            await state.clear()
+            return
+            
+        # Получаем приватный ключ из .env
+        private_key = os.getenv("WALLET_PRIVATE_KEY")
+        if not private_key:
+            await send_telegram_message(
+                message.chat.id,
+                "❌ Ошибка: приватный ключ не найден в .env"
+            )
+            await state.clear()
+            return
+            
+        # Получаем публичный ключ из приватного
+        keypair = Keypair.from_secret_key(base58.b58decode(private_key))
+        public_key = str(keypair.public_key)
+        
+        # Выполняем своп
+        await send_telegram_message(
+            message.chat.id,
+            "🔄 Выполняю своп..."
+        )
+        
+        try:
+            signature = await jupiter_service.perform_swap(
+                token_out_address=token_address,
+                amount=str(int(amount * 1e9)),  # Конвертируем в lamports
+                user_wallet_address=public_key,
+                user_private_key=private_key
+            )
+            
+            solscan_url = f"https://solscan.io/tx/{signature}"
+            await send_telegram_message(
+                message.chat.id,
+                f"✅ Своп успешно выполнен!\n\n"
+                f"Подпись транзакции: {signature}\n"
+                f"Ссылка: {solscan_url}"
+            )
+            
+        except Exception as e:
+            await send_telegram_message(
+                message.chat.id,
+                f"❌ Ошибка при выполнении свопа: {str(e)}"
+            )
+            
+    except Exception as e:
+        logger.error(f"Ошибка в process_amount: {str(e)}")
+    finally:
+        await state.clear()
+
+async def main():
+    try:
+        logger.info("Запуск бота...")
+        await dp.start_polling(bot)
+    except Exception as e:
+        logger.error(f"Ошибка при запуске бота: {str(e)}")
+
+if __name__ == '__main__':
+    asyncio.run(main()) 
